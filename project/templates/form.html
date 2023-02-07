@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Detection Form</title>
+    <link rel="stylesheet" href ="{% static 'css/stylle.css' %}">
+    
+   <link rel="stylesheet" type="text/css" href ="{% static 'datepicker/jquery-ui.min.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="{% static 'images/logo.png' %}" class="logo">
+            <nav>
+                <ul id="menuList"> 
+                    <li><a href="{%url 'home'%}" >Home</a></li> 
+                </ul>
+            </nav>
+            <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="togglemenu()">
+        </div>
+        
+    <div class="mainn">
+        <div class="formm" >
+            <div class="col-1" >
+            <div class="title">Credit Card Fraud Detection Form</div>
+            <div class="detail">
+               <div class="user-details">
+                
+               <form method="post",enctype="multipart/form-data" action="{%url 'predict'%}">
+                {% csrf_token %}
+                <div class="input-box"><span class="details"id ="Cardnum ">Card number</span>
+                    <input class="input" name="Cardnum" type="text" placeholder="Enter your Card number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"id ="Date">Date</span>
+                    <input class="input" name="Date" placeholder="Select the date" id="datepicker" required>    
+                </div>
+                <div class="input-box">
+                    <span class="details" id ="Merchnum ">Merch snumber</span>
+                    <input  class="input" name="Merchnum" type="text" placeholder="Enter the merchant number"  maxlength="15" required>
+                </div>         
+                <div class="input-box">
+                    <span class="details"id ="Merch description">Merch description</span>
+                    <input class="input"name="Merch description"type="text" placeholder="Enter your merchant Description" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"id ="Merch state">Merch state</span>
+                    <input class="input" name="Merch state"type="text" placeholder="Enter your merchant State" maxlength="6" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"id ="Merch zip ">Merch zip</span>
+                    <input class="input" name="Merch zip" type="text" placeholder="Enter the Merch zip" required>
+                </div>  
+                <div class="input-box">
+                    <span class="details"id ="Transtype">Transaction type</span>
+                    <input class="input" name="Transtype" type="text" placeholder="Enter your transaction type" maxlength="1"required>
+                </div>
+                
+                <div class="input-box">
+                    <span class="details"id ="Amount ">Amount</span>
+                    <input class="input" name="Amount" type="text" placeholder="Enter the amount" required>
+                </div> 
+                <div class="button">                        
+                    <input type ="submit" value="Predict" />
+                    </div> 
+                    {% if score %}
+                        <h5> The transaction is : </h5>
+                        <h4>{{score}}</h4>
+               
+                    
+                    <!-- <a class="trigger_popup_fricc">Click here to show the popup</a>
+
+                    <div class="hover_bkgr_fricc">
+                        <span class="helper"></span>
+                        <div>
+                            <div class="popupCloseButton">&times;</div>
+                            <p>Add any HTML content<br />inside the popup box!</p>
+                        </div>
+                    </div> -->
+                    {% endif %}
+                    
+                    </form>
+                    <br>
+             </div>
+            </div>
+            </div>
+        </div>
+        <div class ="col-2">
+            <img src="{% static 'images/fraud.png' %}" class="fraud">
+            <div class="color-box"></div>
+        </div>
+        </div>
+    </div>
+<!-- for date format change -->
+        <script src="{% static 'datepicker/jquery-3.6.0.min.js'%}"></script>
+        <script src="{% static 'datepicker/jquery-ui.min.js'%}"></script>
+        <script>
+            $(document).ready(function(){
+                $('#datepicker').datepicker({
+                    dateFormat : "yy-mm-dd",
+                    changeMonth: true
+                });
+            })
+        </script>
+<!-- for responsive web -->
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+            function togglemenu(){
+                if (menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "130px";
+                }
+                else{
+                    menuList.style.maxHeight = "0px";
+                }
+             }
+            
+            </script>    
+      
+</body>
+</html>

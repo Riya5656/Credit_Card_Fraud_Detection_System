@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credi Card Fraud Detection</title>
+    <link rel="stylesheet" href ="styyle.css">
+</head>
+<body>
+        <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <nav>
+                <ul id="menuList"> 
+                    <li><a href="#main" >Home</a></li> 
+                    <li><a href="#aboutus" >About Us</a></li> 
+                    <li><a href="#links" >Contact Us</a></li> 
+                    <li><a href="" >More</a></li> 
+                    
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div class="row">
+            <div class="col-1">
+                
+                <h2> Credit Card<span style="color:rgb(193, 55, 85);font-weight:bold"> Fraud </span>Detection</h2>
+                <a href="form.html" class="button">PREDICT</a>
+                </div>
+            <div class ="col-2">
+                <img src="images/form.png" class="fraud">
+                <div class="color-box"></div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="about"id="aboutus">
+        <div class="main">
+            <div class="about-text">
+                <h2><hr>About Us<hr></h2>
+                <h5>Card Fraud</h5>
+                <p class="para">Hello. We are here to solve your fear of getting robbed by cyber bullies.<br>With increase in the technology, many of us use cashless payment methods for transaction, like use of debit card, credit card, ebanking method and so on.
+                    Having an ease with the cashless payment comes a risk of having people accessing our finance illegally.So we will try our best to detct those kind of activities if present.
+                </p> 
+            </div>
+        </div>
+    </div>
+      <div class="social">
+        <div class="text">
+            <h4>You can email us if you have any problem</h4>
+            <p>Riya.parajuli@gmail.com</p>
+            <p>Dangolshyamron@gmail.com</p>
+            <div class="social-links " id="links">
+                <img src="images/fb.png">
+                <img src="images/tw.png">
+                <img src="images/ig.png">
+            </div>
+
+        </div>
+</div>
+   <!-- for responsive web -->
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+            if (menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "130px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+         }
+        
+        </script>
+</body>
+</html>

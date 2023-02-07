@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  .container{
+    width: 100%;
+    min-height :100vh;
+    padding-left: 4%;
+    padding-right: 4%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+.navbar{
+      width: 100%;
+      display: flex;
+      align-items: center;
+  }
+.logo{
+      width: 100px;
+      cursor: pointer;
+      margin: 0px;
+  }
+.menu-icon{
+    width:25px;
+    cursor: pointer;
+    display: none;
+  }
+nav{
+      flex: 1;
+      text-align: right;
+  }
+nav ul li {
+      list-style: none;
+      display: inline-block;
+  }
+nav ul li a{
+     text-decoration: none;
+       color:#000; 
+      font-size : 20px;
+  }
+  nav ul li a:hover{
+      color:#fb5283
+  }
+
+/* actual css */
+
+.cmp{
+    width: 450px;
+    height: 450px;
+    cursor: pointer;
+    margin-left:42px;
+    margin-top: 150px;
+     display: inline-block;
+    vertical-align: top;
+
+}
+ .formm{
+    width:800px;
+    background-color: rgba(81, 81, 81, 0.6);  
+    padding: 10px 0px 1px 0px;
+    text-align: center;
+    border-radius:15px 15px 15px 15px ;
+    font-size: 35px;
+
+    font-weight: bold;
+    margin-top: 1000px; 
+    margin-left: 50px; 
+    display: inline-block;
+    vertical-align: bottom;
+ }
+ .title{
+  background: #70ABAF; 
+  margin-left: 0px;
+   width: 100%;
+   margin-top: 0px;
+   }
+
+  
+ .mainn{
+    width: 1300px;
+    height: 750px;
+    max-width: 95%;
+    margin-top: 1000px;  
+    display: flex;  
+    align-items: center; 
+    justify-content: space-around; 
+ }
+.detail{
+    background-color: rgba(7, 5, 5, 0.5);
+    border-radius:10px 10px 15px 15px ;
+    width: 800px;
+    margin: auto;
+}
+form{
+     padding: 10px; 
+}
+.input-box{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.details{
+    margin-left: 130px;
+    margin-top: 15px;
+    width: 200px;
+    color: white; 
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 22px; 
+    
+}
+.input{
+    position:static;
+    left: 40px;
+    top: 10px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 18px;
+    width: calc(100% / 2 - 20px); 
+    border-radius: 20px;
+    border: 1px solid rgb(193, 55, 85); 
+}
+.input:focus,
+.input:valid{
+    border-color: #9b599b; 
+}
+.button{
+  height: 45px;
+  margin: 35px 0
+}
+.button input{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+   color: black; 
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #70ABAF; 
+}
+.button input:hover{
+  background-color:  rgb(193, 55, 85);
+  }  
+  .color-box{
+    position: absolute;
+    right: 0;
+    top:0;
+    background: linear-gradient( to right, #dc2424,#4a569d);
+    border-radius: 300px 0 0 0px;
+    height :50%;
+    width: 30%;
+    z-index: -1; 
+    margin-top: 200px;
+    margin-right: 50px;
+}
+
+
+/* for responsive web*/
+@media only  screen  and (max-width:1450px){
+  nav ul {
+    width:100%;
+    background:#4a569d;
+    position: absolute;
+    top:75px;
+    right: 0;;
+    }
+nav ul li{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+nav ul li a{
+    color:#fff;
+    font-size: 10px;
+    }
+.menu-icon{
+    display: block;
+    }
+#menuList{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .formm{
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .color-box{
+      display: none;
+    }
+     .user-details{
+       max-width: 100%;
+        max-height:100%;
+      
+    } 
+    .title{
+      font-size: 20px;
+    }
+    .detail{
+      max-width:100%;
+    }
+    .input-box{ 
+        width: 100%;
+    }
+    .details{
+      display: none;
+    }
+    .input{
+      width: 95%;
+    }
+    .button{
+      width: 95%;
+    }
+    
+
+    
+}
+
+
+
+
+
+

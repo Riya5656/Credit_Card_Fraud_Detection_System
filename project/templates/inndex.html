@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credi Card Fraud Detection</title>
+    <link rel="stylesheet" href ="{% static 'css/styyle.css' %}">
+    
+</head>
+<body>
+        <div class="container">
+        <div class="navbar" >
+            <img src="{% static 'images/logo.png' %}" class="logo">
+            <nav>
+                <ul id="menuList"> 
+                    <li><a href=" " >Home</a></li> 
+                    <li><a href="#about" >About Us</a></li> 
+                    <li><a href="#contact" >Contact Us</a></li> 
+                    
+                </ul>
+            </nav>
+            <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h2> Credit Card<span style="color:rgb(193, 55, 85);font-weight:bold"> Fraud </span>Detection</h2>
+                <a href="form.html" class="button">PREDICT</a>
+                </div>
+                </form>
+
+
+            <div class ="col-2">
+                <img src="{% static 'images/form.png' %}" class="fraud">
+                <div class="color-box"></div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="about"id="about">
+        <div class="main">
+            <div class="about-text">
+                <h2><hr>About Us<hr></h2>
+                <h5>Card Fraud</h5>
+                <p class="para">Hello. We are here to solve your fear of getting robbed by cyber bullies.<br>With increase in the technology, many of us use cashless payment methods for transaction.
+                    Having an ease with the cashless payment comes a risk of having people accessing our finance illegally. This is simple fraud detection system built by 3rd year students of Khwopa College of Engineering as a partial fullfillment for the degree of Computer Engineering.
+                </p> 
+                </form>
+            </div>
+        </div>
+    </div>
+      <div class="social" id="contact">
+        <div class="text">
+            <h4>You can email us if you have any problem</h4>
+            <p>Riya.parajuli@gmail.com</p>
+            <p>Dangolshyamron@gmail.com</p>
+            <div class="social-links " id="links">
+                <img src="{% static 'images/fb.png' %}">
+                <img src="{% static 'images/tw.png' %}">
+                <img src="{% static 'images/ig.png' %}">
+            </div>
+
+        </div>
+</div>
+   <!-- for responsive web -->
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+            if (menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "130px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+         }
+        
+        </script>
+</body>
+</html>

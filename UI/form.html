@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Detection Form</title>
+    <link rel="stylesheet" href ="stylle.css">
+   <link rel="stylesheet" type="text/css" href ="datepicker/jquery-ui.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <nav>
+                <ul id="menuList"> 
+                    <li><a href="inndex.html" >Home</a></li> 
+                    <li><a href="inndex.html#aboutus" >About Us</a></li> 
+                    <li><a href="inndex.html#links" >Contact Us</a></li> 
+                    <li><a href="" >More</a></li> 
+                    
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+    <div class=""mainn>
+       
+        <div class="formm">
+            <div class="title">Credit Card Fraud Detection Form</div>
+            <div class="detail">
+            <form method="POST" >  
+                <div class="user-details">
+                <div class="input-box"><span class="details"id ="cardnum ">Card number</span>
+                    <input class="input"type="text" placeholder="Enter your Card number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"id ="date">Date</span>
+                    <input class="input" placeholder="Select the date" id="datepicker" required>    
+                </div>
+                <div class="input-box">
+                    <span class="details" id ="merchnum ">Merch-number</span>
+                    <input  class="input"type="text" placeholder="Enter the merchant number"  maxlength="15" required>
+                </div>         
+                <div class="input-box">
+                    <span class="details"id ="merchdesp">Merch description</span>
+                    <input class="input"type="text" placeholder="Enter your merchant Description" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"id ="merchstate ">Merch state</span>
+                    <input class="input" type="text" placeholder="Enter your merchant State" maxlength="6" required>
+                </div>
+                <div class="input-box">
+                    <span class="details"id ="merchxip ">Merch zip</span>
+                    <input class="input" type="number" placeholder="Enter the Merch zip" required>
+                </div>  
+                <div class="input-box">
+                    <span class="details"id ="transtype">Transaction type</span>
+                    <input class="input"type="text" placeholder="Enter your transaction type" maxlength="1"required>
+                </div>
+                
+                <div class="input-box">
+                    <span class="details"id ="amount ">Amount</span>
+                    <input class="input" type="number" placeholder="Enter the amount" required>
+                </div> 
+                <div class="button">                        
+                    <input type ="submit" value="Predict" />
+                    </div> 
+             </div>
+            </form>
+            </div>
+        </div>
+
+<!-- for date format change -->
+        <script src="datepicker/jquery-3.6.0.min.js"></script>
+        <script src="datepicker/jquery-ui.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#datepicker').datepicker({
+                    dateFormat : "dd/mm/yy",
+                    changeMonth: true
+                });
+            })
+        </script>
+<!-- for responsive web -->
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+            function togglemenu(){
+                if (menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "130px";
+                }
+                else{
+                    menuList.style.maxHeight = "0px";
+                }
+             }
+            
+            </script>    
+      
+</body>
+</html>
